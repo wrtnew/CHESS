@@ -25,9 +25,7 @@ from misc.utils import init_sample
 
 import os
 
-os.environ["WANDB_API_KEY"] = '31fa87f2d10ab956d0835679535c0304d5459412'  # 将引号内的+替换成自己在wandb上的一串值
-# os.environ["WANDB_BASE_URL"] = "https://api.wandb-cn.top"
-os.environ["WANDB_BASE_URL"] = "https://api.bandw.top"
+
 class TensorDatasets(torch.utils.data.Dataset):
     def __init__(self, images, labels, transform=None):
         # images: NxCxHxW tensor
