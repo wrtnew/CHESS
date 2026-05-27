@@ -438,15 +438,6 @@ def condense(args, logger, device='cuda'):
     # Define augmentation function
     # aug, _ = diffaug(args)
 
-    if not args.test:
-        # save_img(os.path.join(args.save_dir, 'init.png'),
-        #     synset.data,
-        #     unnormalize=False,
-        #     dataname=args.dataset)
-        torch.save([synset.data.detach().cpu(), synset.targets.cpu()],
-                   os.path.join(args.save_dir, 'data_0.pt'))
-        print('begin init')
-        synset.test(args, test_loader, logger, bench=False)
 
     # Data distillation
     # optim_img = torch.optim.SGD(synset.parameters(), lr=args.lr_img, momentum=args.mom_img)
@@ -457,12 +448,12 @@ def condense(args, logger, device='cuda'):
     # n_iter = 2
     it_log = 10
 
-    it_test = np.arange(0, n_iter + 1, 1000).tolist()
+    it_test = np.arange(0, n_iter + 1, 200).tolist()
     # it_test = np.arange(0, n_iter + 1, 1).tolist()
 
     # it_test = [n_iter // 10, n_iter // 5, n_iter // 2, n_iter]
 
-    logger(f"\n DANCE: Start condensing for {n_iter} iteration")
+    logger(f"\n CHESS: Start condensing for {n_iter} iteration")
 
     best_convnet = -1
     best_resnet = -1
