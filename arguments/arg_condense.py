@@ -178,7 +178,7 @@ parser.add_argument('--niter', type=int, default=2, help='number of outer iterat
 
 parser.add_argument('--num_premodel',
                     type=int,
-                    default=2,
+                    default=20,
                     help='number of pretrained models')
 parser.add_argument('--iter_calib',
                     type=int,
