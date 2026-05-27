@@ -80,11 +80,8 @@ After downloading, place the weight files into the corresponding checkpoint dire
 ### Step 2 — Run Distillation
 
 ```bash
-python chess_actr.py --ipc 1 --reproduce
+python chess_actr.py --ipc 5 --reproduce
 ```
-
-The `--ipc` argument controls the number of synthetic samples per class (SPC). You can vary it (e.g., `--ipc 5`, `--ipc 10`) to reproduce the results reported in Table 1 of the paper.
-
 ---
 
 ## 📬 Contact
