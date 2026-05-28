@@ -44,8 +44,8 @@ def set_arguments(args):
         args.save_dir = './test_results/'
     else:
         args.save_dir = "./your_saved_results/"
-    args.batch_syn_max=64
-    args.batch_real=64
+    args.batch_syn_max=128
+    args.batch_real=128
     args.load_memory=False
     args.rank = 5  # 秩 (Rank)
     args.seglen = 100  # 切比雪夫分段长度
